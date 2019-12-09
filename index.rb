@@ -1,6 +1,7 @@
 require 'sinatra'
-require 'twilio-ruby'
+
+set :public_folder, 'public'
 
 get '/' do
-  [200, 'OK']
+  send_file 'public/index.html'
 end

@@ -9,6 +9,7 @@ GEM
     mustermann (1.0.3)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    nokogiri (1.10.7-java)
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
@@ -24,6 +25,7 @@ GEM
       nokogiri (>= 1.6, < 2.0)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
