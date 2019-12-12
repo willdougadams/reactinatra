@@ -1,4 +1,7 @@
 .idea/
+.cache/
+public/**.js
+public/**.js.map
 node_modules/
 tsconfig.tsbuildinfo
 yarn.lock
