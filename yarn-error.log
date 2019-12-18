@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/willadams/.nvm/versions/node/v12.13.0/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js add svg-inline-laoder
+  /Users/willadams/.nvm/versions/node/v12.13.0/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js start
 
 PATH: 
   /Users/willadams/.rvm/gems/ruby-2.4.4/bin:/Users/willadams/.rvm/gems/ruby-2.4.4@global/bin:/Users/willadams/.rvm/rubies/ruby-2.4.4/bin:/Users/willadams/.rvm/bin:/Users/willadams/google-cloud-sdk/bin:/usr/local/opt/mysql@5.6/bin:/Users/willadams/.yarn/bin:/Users/willadams/.config/yarn/global/node_modules/.bin:/usr/local/opt/make/libexec/gnubin:/Users/willadams/torch/install/bin:/Users/willadams/.nvm/versions/node/v12.13.0/bin:/Users/willadams/.avn/bin:/usr/local/opt/mysql@5.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/opt/X11/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/willadams/Library/Python/2.7/bin
@@ -14,17 +14,12 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/svg-inline-laoder: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:66947:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:140665:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141637:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:141559:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1183:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  SyntaxError: /Users/willadams/reactinatra/package.json: Unexpected token / in JSON at position 170
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -34,12 +29,31 @@ npm manifest:
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
+      // "dev": "ruby src/app.rb & webpack --watch & wait",
       "start": "webpack && ruby src/server/index.rb",
       "build": "webpack --display-error-details"
     },
     "author": "will.adams@looker.com",
     "license": "ISC",
     "dependencies": {
+      "express": "^4.15.2",
+      "ignore-styles": "^5.0.1",
+      "mocha": "^3.2.0",
+      "node-sass": "^4.5.2",
+      "prop-types": "^15.5.8",
+      "react": "^16.12.0",
+      "react-addons-test-utils": "^15.5.1",
+      "react-dom": "^16.12.0",
+      "react-test-renderer": "^15.5.4",
+      "sass-loader": "^6.0.3",
+      "source-map-loader": "^0.2.4",
+      "style-loader": "^0.16.1",
+      "ts-loader": "^6.2.1",
+      "typescript": "^3.7.3",
+      "webpack": "^4.41.3",
+      "webpack-cli": "^3.3.10"
+    },
+    "devDependencies": {
       "@types/node": "^12.12.20",
       "@types/react": "^16.9.16",
       "@types/react-dom": "^16.9.4",
@@ -55,23 +69,10 @@ npm manifest:
       "enzyme": "^2.8.1",
       "eslint": "^6.7.2",
       "expect": "^1.20.2",
-      "express": "^4.15.2",
-      "ignore-styles": "^5.0.1",
-      "mocha": "^3.2.0",
-      "node-sass": "^4.5.2",
-      "prop-types": "^15.5.8",
-      "react": "^16.12.0",
-      "react-addons-test-utils": "^15.5.1",
-      "react-dom": "^16.12.0",
+      "file-loader": "^5.0.2",
       "react-inlinesvg": "^1.2.0",
-      "react-test-renderer": "^15.5.4",
-      "sass-loader": "^6.0.3",
-      "source-map-loader": "^0.2.4",
-      "style-loader": "^0.16.1",
-      "ts-loader": "^6.2.1",
-      "typescript": "^3.7.3",
-      "webpack": "^4.41.3",
-      "webpack-cli": "^3.3.10"
+      "svg-inline-loader": "^0.8.0",
+      "url-loader": "^3.0.0"
     }
   }
 
@@ -1170,6 +1171,11 @@ Lockfile:
     integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
     dependencies:
       tweetnacl "^0.14.3"
+  
+  big.js@^3.1.3:
+    version "3.2.0"
+    resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
+    integrity sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==
   
   big.js@^5.2.2:
     version "5.2.2"
@@ -2705,6 +2711,14 @@ Lockfile:
     dependencies:
       flat-cache "^2.0.1"
   
+  file-loader@^5.0.2:
+    version "5.0.2"
+    resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-5.0.2.tgz#7f3d8b4ac85a5e8df61338cfec95d7405f971caa"
+    integrity sha512-QMiQ+WBkGLejKe81HU8SZ9PovsU/5uaLo0JdTCEXOYv7i7jfAjHZi1tcwp9tSASJPOmmHZtbdCervFmXMH/Dcg==
+    dependencies:
+      loader-utils "^1.2.3"
+      schema-utils "^2.5.0"
+  
   file-uri-to-path@1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
@@ -3827,7 +3841,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1"
     integrity sha1-PAQ0dD35Pi9cQq7nsZvLSDV19OE=
   
-  json5@^0.5.1:
+  json5@^0.5.0, json5@^0.5.1:
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
     integrity sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=
@@ -3919,6 +3933,16 @@ Lockfile:
       big.js "^5.2.2"
       emojis-list "^2.0.0"
       json5 "^1.0.1"
+  
+  loader-utils@^0.2.11:
+    version "0.2.17"
+    resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
+    integrity sha1-+G5jdNQyBabmxg6RlvF8Apm/s0g=
+    dependencies:
+      big.js "^3.1.3"
+      emojis-list "^2.0.0"
+      json5 "^0.5.0"
+      object-assign "^4.0.1"
   
   locate-path@^3.0.0:
     version "3.0.0"
@@ -4277,6 +4301,11 @@ Lockfile:
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
     integrity sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  
+  mime@^2.4.4:
+    version "2.4.4"
+    resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.4.tgz#bd7b91135fc6b01cde3e9bae33d659b63d8857e5"
+    integrity sha512-LRxmNwziLPT828z+4YkNzloCFC2YM4wrB99k+AV5ZbEyfGNWfG8SO1FUXLmLDBSo89NrJZ4DIWeLjy1CHGhMGA==
   
   mimic-fn@^2.0.0, mimic-fn@^2.1.0:
     version "2.1.0"
@@ -5830,6 +5859,14 @@ Lockfile:
       ajv-errors "^1.0.0"
       ajv-keywords "^3.1.0"
   
+  schema-utils@^2.5.0:
+    version "2.6.1"
+    resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
+    integrity sha512-0WXHDs1VDJyo+Zqs9TKLKyD/h7yDpHUhEFsM2CzkICFdoX1av+GBq/J2xRTFfsQO5kBfhZzANf2VcIm84jqDbg==
+    dependencies:
+      ajv "^6.10.2"
+      ajv-keywords "^3.4.1"
+  
   scss-tokenizer@^0.2.3:
     version "0.2.3"
     resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -5945,6 +5982,11 @@ Lockfile:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
     integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
+  
+  simple-html-tokenizer@^0.1.1:
+    version "0.1.1"
+    resolved "https://registry.yarnpkg.com/simple-html-tokenizer/-/simple-html-tokenizer-0.1.1.tgz#05c2eec579ffffe145a030ac26cfea61b980fabe"
+    integrity sha1-BcLuxXn//+FFoDCsJs/qYbmA+r4=
   
   slash@^1.0.0:
     version "1.0.0"
@@ -6332,6 +6374,15 @@ Lockfile:
     dependencies:
       has-flag "^3.0.0"
   
+  svg-inline-loader@^0.8.0:
+    version "0.8.0"
+    resolved "https://registry.yarnpkg.com/svg-inline-loader/-/svg-inline-loader-0.8.0.tgz#7e9d905d80d0b4e68d2df21afcd08ee9e9a3ea6e"
+    integrity sha512-rynplY2eXFrdNomL1FvyTFQlP+dx0WqbzHglmNtA9M4IHRC3no2aPAl3ny9lUpJzFzFMZfWRK5YIclNU+FRePA==
+    dependencies:
+      loader-utils "^0.2.11"
+      object-assign "^4.0.1"
+      simple-html-tokenizer "^0.1.1"
+  
   svgo@^0.7.0:
     version "0.7.2"
     resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -6650,6 +6701,15 @@ Lockfile:
     version "0.1.0"
     resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
     integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+  
+  url-loader@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-3.0.0.tgz#9f1f11b371acf6e51ed15a50db635e02eec18368"
+    integrity sha512-a84JJbIA5xTFTWyjjcPdnsu+41o/SNE8SpXMdUvXs6Q+LuhCD9E2+0VCiuDWqgo3GGXVlFHzArDmBpj9PgWn4A==
+    dependencies:
+      loader-utils "^1.2.3"
+      mime "^2.4.4"
+      schema-utils "^2.5.0"
   
   url@^0.11.0:
     version "0.11.0"

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && ruby src/server/index.rb",
+    "start": "yarn build && yarn api",
+    "api": "ruby src/app.rb",
     "build": "webpack --display-error-details"
   },
   "author": "will.adams@looker.com",
@@ -19,12 +20,10 @@
     "react": "^16.12.0",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^16.12.0",
-    "react-inlinesvg": "^1.2.0",
     "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.3",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.16.1",
-    "svg-inline-loader": "^0.8.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3",
     "webpack": "^4.41.3",
@@ -46,6 +45,9 @@
     "enzyme": "^2.8.1",
     "eslint": "^6.7.2",
     "expect": "^1.20.2",
-    "file-loader": "^5.0.2"
+    "file-loader": "^5.0.2",
+    "react-inlinesvg": "^1.2.0",
+    "svg-inline-loader": "^0.8.0",
+    "url-loader": "^3.0.0"
   }
 }
