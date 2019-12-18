@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= @react_module.capitalize %></title>
+</head>
+<body>
+    <noscript>Hello? Is <%= @react_module %>.js there?  Wrong number? Oh sorry, I'll call webpack </noscript>
+    <div id='root'></div>
+    <script src="js/<%= @react_module %>.js"></script>
+</body>
+</html>

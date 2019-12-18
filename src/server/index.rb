@@ -8,6 +8,6 @@ set :root, 'public'
 configure { set :server, :puma }
 
 get '/' do
-  @name = 'signup'
-  erb :index
+  @react_module = 'signup'
+  erb :react
 end
