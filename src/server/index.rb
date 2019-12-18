@@ -8,5 +8,6 @@ set :root, 'public'
 configure { set :server, :puma }
 
 get '/' do
-  render :html, :index
+  @name = 'signup'
+  erb :index
 end

@@ -7,7 +7,7 @@ module.exports = {
         signup: './src/web/signup/index'
     },
     output: {
-        path: path.join(__dirname, './public'),
+        path: path.join(__dirname, './public/js'),
         filename: '[name].js'
     },
     context: path.resolve(__dirname),
