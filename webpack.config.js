@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -27,13 +26,7 @@ module.exports = {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: 'web/**/**.svg',
-                to: 'img',
-            }
-        ]),
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     externals: {
         'React': 'react',

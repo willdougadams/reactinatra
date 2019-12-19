@@ -18,5 +18,7 @@
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.svg"],
   "exclude": ["node_modules"],
-  "files": ["ts-types.d.ts"]
+  "files": [
+    "src/web/landing/landing.d.ts"
+  ]
 }
