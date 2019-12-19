@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 
-import App from './signup'
+import { Signup } from './signup'
 
-render(<App />, document.getElementById('root'))
+render(<Signup />, document.getElementById('root'))

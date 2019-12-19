@@ -5,21 +5,27 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn build && yarn api",
+    "start": "run-s kill:puma go",
+    "go": "run-p build api",
     "api": "ruby src/app.rb",
-    "build": "webpack --display-error-details"
+    "kill:puma": "kill -9 `pgrep 4567`",
+    "build": "webpack --watch"
   },
   "author": "will.adams@looker.com",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.8.0",
     "express": "^4.15.2",
     "ignore-styles": "^5.0.1",
     "mocha": "^3.2.0",
     "node-sass": "^4.5.2",
+    "npm-run-all": "^4.1.5",
     "prop-types": "^15.5.8",
     "react": "^16.12.0",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^16.12.0",
+    "react-svg": "^11.0.4",
+    "react-svg-loader": "^3.0.3",
     "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.3",
     "source-map-loader": "^0.2.4",
@@ -30,6 +36,7 @@
     "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
+    "@types/muicss": "^0.9.1",
     "@types/node": "^12.12.20",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
