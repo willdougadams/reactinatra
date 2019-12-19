@@ -17,5 +17,6 @@
     "baseUrl": "web"
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.svg"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "files": ["ts-types.d.ts"]
 }

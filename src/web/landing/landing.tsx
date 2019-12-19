@@ -1,7 +1,8 @@
 import '../assets/App.scss'
 
 import * as React from 'react'
-//import sinatra from '../assets/sinatra'
+import * as sinatra from './sinatra.svg'
+import { ReactSVG } from 'react-svg'
 
 
 const Landing: React.FC = () => {
@@ -11,9 +12,7 @@ const Landing: React.FC = () => {
         <p>
           Welcome to Reactinatra!  Run <code>npm run dev</code> to launch with asset hot-reloading
         </p>
-        <img
-          src={'web/assets/sinatra.json'}
-        />
+        <ReactSVG src={'./sinatra.svg'} />
         <p>
           Or you can edit <code>src/App.tsx</code>, run <code>webpack</code> to bundle assets, then <br />
           <code>ruby derrit.rb</code> to launch the server and visit https://localhost:4567/ to see!
