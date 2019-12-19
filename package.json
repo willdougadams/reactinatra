@@ -9,7 +9,8 @@
     "go": "run-p build api",
     "api": "ruby src/app.rb",
     "kill:puma": "kill -9 `pgrep 4567`",
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "clean": "rm -rf public/build/ yarn-error.log"
   },
   "author": "will.adams@looker.com",
   "license": "ISC",

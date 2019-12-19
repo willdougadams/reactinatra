@@ -1,6 +1,4 @@
-{ // TypeScript configuration file: provides options to the TypeScript
-  // compiler (tsc) and makes VSCode recognize this folder as a TS project,
-  // enabling the VSCode build tasks "tsc: build" and "tsc: watch".
+{
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
