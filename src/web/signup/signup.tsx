@@ -1,4 +1,4 @@
-import '../assets/common.scss'
+import '../landing/assets/common.scss'
 import '../common/components/Form.scss'
 
 import * as React from 'react'

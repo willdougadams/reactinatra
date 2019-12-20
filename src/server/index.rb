@@ -6,7 +6,7 @@ class Reactinatra < Sinatra::Base
     erb :react
   end
 
-  get '/signin' do
+  get '/signup' do
     @react_module = 'signup'
     erb :react
   end
