@@ -1,6 +1,5 @@
 import * as React from 'react'
 
-
 export interface FormProps {
 }
 
@@ -19,9 +18,9 @@ export interface FormItemProps {
 
 export const FormInput: React.FC<FormItemProps> = (props: FormItemProps) => {
   return (
-      <label>
-        <input type={props.type} name={props.name} />
-        { props.label }
-      </label>
+    <label>
+      <input type={props.type} name={props.name} />
+      { props.label }
+    </label>
   )
 }

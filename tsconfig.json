@@ -11,12 +11,15 @@
       "dom",
       "es2017"
     ],
-    "types": ["node"],
-    "baseUrl": "web"
+    "types": ["node", "jest"],
+    "baseUrl": "web",
+    "esModuleInterop": true
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.svg"],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules",
+    "src/web/__tests__"
+  ],
   "files": [
-    "src/web/landing/landing.d.ts"
+    "src/web/landing/Landing.d.ts"
   ]
 }

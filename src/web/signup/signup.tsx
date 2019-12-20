@@ -2,7 +2,7 @@ import '../assets/common.scss'
 import '../common/components/Form.scss'
 
 import * as React from 'react'
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 
 // import logo from '../assets/react.svg'
 // import * as sinatra from './sinatra.png'
@@ -43,11 +43,11 @@ export const Signup: React.FC = () => {
         <FormInput name={'email'} type={'text'} label={'Email'} />
         <FormInput name={'password'} type={'text'} label={'Name'} />
         <FormInput name={'password'} type={'text'} label={'Confirm Password'} />
-        <Button classes={{label: 'Button'}} size='small' variant="contained" color='primary' >
+        <Button classes={{ label: 'Button' }} size='small' variant="contained" color='primary' >
           Hello World
         </Button>
       </Form>
-      {/*}
+      {/* }
       <SVG
         src={logo}
         width='33%'
