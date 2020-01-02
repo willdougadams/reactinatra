@@ -1,8 +1,9 @@
 # encoding: utf-8
 require 'sinatra'
+require 'sequel'
+require 'sqlite3'
 
-require_relative 'models/init'
-# require_relative 'helpers/init'
+DB = Sequel.connect 'sqlite://main.db'
 require_relative 'server/init'
 
 class Reactinatra < Sinatra::Base
@@ -15,13 +16,15 @@ class Reactinatra < Sinatra::Base
   configure { set :server, :puma }
 
   before do
-    body = request.body.rewind
-    if !body.nil? and !body.empty?
+    request.body.rewind
+    body = request.body.read
+    if !body.nil? && !body.empty?
       @body = JSON.parse body
-    else
-      @body = {}
     end
   end
 
   run!
 end
+
+require_relative 'models/init'
+# require_relative 'helpers/init'

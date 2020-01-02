@@ -3,7 +3,7 @@ import useForm from 'react-hook-form'
 import { Button, Input } from '@material-ui/core'
 
 interface FormTextInputProps {
-  // registerHook is nullable to avoid errors when using it to build forms, this will be added from the form
+  // registerHook is nullable to avoid errors when using it to build forms, this will be added from the Form
   registerHook?: () => any
   name: string
   label?: string

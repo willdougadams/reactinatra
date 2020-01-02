@@ -4,3 +4,4 @@ public/build/
 node_modules/
 tsconfig.tsbuildinfo
 yarn.lock
+main.db
