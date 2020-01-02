@@ -1,9 +1,7 @@
 # encoding: utf-8
 require 'sinatra'
-require 'sequel'
-require 'sqlite3'
 
-DB = Sequel.connect 'sqlite://main.db'
+require_relative 'models/init'
 require_relative 'server/init'
 
 class Reactinatra < Sinatra::Base
@@ -26,5 +24,4 @@ class Reactinatra < Sinatra::Base
   run!
 end
 
-require_relative 'models/init'
 # require_relative 'helpers/init'
