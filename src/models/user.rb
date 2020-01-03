@@ -8,3 +8,4 @@ DB.create_table :users do
   String :email, unique: true, null: false
   String :password, null: false
 end
+
