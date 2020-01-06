@@ -10,4 +10,9 @@ class Reactinatra < Sinatra::Base
     @react_module = 'signup'
     erb :react
   end
+
+  get '/user/:id' do
+    @react_module = 'dashboard'
+
+  end
 end
