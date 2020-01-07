@@ -23,5 +23,3 @@ class Reactinatra < Sinatra::Base
 
   run!
 end
-
-# require_relative 'helpers/init'

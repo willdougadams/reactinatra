@@ -1,5 +1,6 @@
 .idea/
 .cache/
+coverage/
 public/build/
 node_modules/
 tsconfig.tsbuildinfo

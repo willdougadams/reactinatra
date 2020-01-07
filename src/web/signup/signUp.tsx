@@ -3,14 +3,13 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
 import useForm from 'react-hook-form'
-import {Button} from '@material-ui/core'
+import { Button } from '@material-ui/core'
 
 const darkTheme = createMuiTheme({
   palette: {
     type: 'dark'
   }
 })
-
 
 interface FormTextInputProps {
   // registerHook is nullable to avoid errors when using it to build forms, this will be added from the Form
@@ -106,6 +105,8 @@ export const SignUp: React.FC = (props: any) => {
         } else if (message.includes('UNIQUE constraint failed: users.username')) {
           setUsernameError('Username already in use')
         }
+      } else {
+        const id = await response.text()
       }
     }
   }

@@ -1,7 +1,10 @@
 import * as React from 'react'
 
-export const Dashboard: React.FC = (props: any) => {
+interface DashboardProps {
+}
+
+export const Dashboard: React.FC = (props: DashboardProps) => {
   return (
-    <div>Dashboard for user </div>
+    <div color={'red'}>Dashboard for user</div>
   )
 }
