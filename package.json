@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collectCoverage",
+    "test": "rake test; jest --collectCoverage; yarn kill:puma",
     "test:watch": "jest --watch",
     "lint": "eslint '*/**/*.{ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{ts,tsx}' --fix",
@@ -12,7 +12,7 @@
     "go": "run-p build api",
     "api": "ruby src/app.rb",
     "kill:puma": "kill -9 `pgrep 4567`",
-    "build": "webpack --watch",
+    "build": "webpack",
     "clean": "rm -rf public/build/ yarn-error.log"
   },
   "author": "will.adams@looker.com",
