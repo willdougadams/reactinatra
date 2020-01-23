@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 
-import { Dashboard } from './dashboard'
+import Landing from '../landing/Landing'
 
-render(<Dashboard />, document.getElementById('root'))
+render(<Landing />, document.getElementById('root'))

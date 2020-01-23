@@ -20,6 +20,6 @@ class Reactinatra < Sinatra::Base
       @body = JSON.parse body
     end
   end
-
-  run!
 end
+
+Reactinatra.run!

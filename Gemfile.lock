@@ -8,11 +8,13 @@ GEM
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
+    sequel (5.28.0)
     sinatra (2.0.7)
       mustermann (~> 1.0)
       rack (~> 2.0)
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
+    sqlite3 (1.4.2)
     tilt (2.0.10)
 
 PLATFORMS
@@ -20,7 +22,9 @@ PLATFORMS
 
 DEPENDENCIES
   puma
+  sequel
   sinatra
+  sqlite3
 
 RUBY VERSION
    ruby 2.4.4p296
