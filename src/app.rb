@@ -6,10 +6,7 @@ require_relative 'server/init'
 
 class Reactinatra < Sinatra::Base
   enable :sessions
-
   set :public_folder, 'public'
-  set :views, 'public'
-  set :root, 'public'
 
   configure { set :server, :puma }
 
