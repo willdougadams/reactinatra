@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'sinatra'
+require 'sinatra/base'
 
 require_relative 'models/init'
 require_relative 'server/init'
@@ -7,8 +7,6 @@ require_relative 'server/init'
 class Reactinatra < Sinatra::Base
   enable :sessions
   set :public_folder, 'public'
-
-  configure { set :server, :puma }
 
   before do
     request.body.rewind

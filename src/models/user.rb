@@ -2,7 +2,7 @@
 require "sequel"
 
 DB.create_table :users do
-  primary_key :id, auto_increment: true
+  primary_key :id, auto_increment: true, null: false
   String :name, unique: true, null: false
   String :username, unique: true, null: false
   String :email, unique: true, null: false

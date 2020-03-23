@@ -9,7 +9,7 @@
     "lint": "eslint '*/**/*.{ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{ts,tsx}' --fix",
     "start": "yarn kill:puma & yarn go",
-    "go": "run-p build api",
+    "go": "yarn build && yarn api",
     "api": "ruby src/app.rb",
     "kill:puma": "kill -9 `pgrep 4567`",
     "build": "webpack",

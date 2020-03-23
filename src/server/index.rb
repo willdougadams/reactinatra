@@ -1,4 +1,4 @@
-require 'sinatra'
+require 'sinatra/base'
 
 class Reactinatra < Sinatra::Base
   set :views, 'public'
@@ -15,6 +15,6 @@ class Reactinatra < Sinatra::Base
 
   get '/user/:id' do
     @react_module = 'dashboard'
-    erb :react
+    erb :user
   end
 end

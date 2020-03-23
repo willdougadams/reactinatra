@@ -105,8 +105,6 @@ export const SignUp: React.FC = (props: any) => {
         } else if (message.includes('UNIQUE constraint failed: users.username')) {
           setUsernameError('Username already in use')
         }
-      } else {
-        const id = await response.text()
       }
     }
   }
