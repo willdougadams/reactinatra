@@ -37,6 +37,7 @@ export const FormTextInput: React.FC<FormTextInputProps> = (props: FormTextInput
         type={props.type || 'text'}
         error={!!props.error}
         helperText={props.error || ''}
+        defaultValue='default'
       />
     </div>
   )
@@ -61,7 +62,6 @@ export const Form: React.FC<any> = (props: any) => {
     </form>
   )
 }
-
 
 interface signUpPayload {
   name: string
@@ -105,6 +105,8 @@ export const SignUp: React.FC = (props: any) => {
         } else if (message.includes('UNIQUE constraint failed: users.username')) {
           setUsernameError('Username already in use')
         }
+      } else {
+        window.location.href = response.url
       }
     }
   }
