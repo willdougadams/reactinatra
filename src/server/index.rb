@@ -15,6 +15,7 @@ class Reactinatra < Sinatra::Base
 
   get '/user/:id' do
     @react_module = 'dashboard'
+    @user_id = @params['id']
     erb :user
   end
 end
