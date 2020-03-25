@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "rake test; jest --collectCoverage; yarn kill:puma",
+    "test": "rake test; jest --collectCoverage",
+    "test:api": "rake test",
     "test:watch": "jest --watch",
     "lint": "eslint '*/**/*.{ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{ts,tsx}' --fix",
-    "start": "yarn kill:puma & yarn go",
-    "go": "yarn build && yarn api",
+    "start": "yarn build && yarn api",
     "api": "ruby src/app.rb",
-    "kill:puma": "kill -9 `pgrep 4567`",
     "build": "webpack",
     "clean": "rm -rf public/build/ yarn-error.log"
   },

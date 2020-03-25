@@ -9,17 +9,20 @@ class Reactinatra < Sinatra::Base
       redirect "user/#{id}"
     rescue => e
       puts e
-      [500, {}, [e.message]]
+      status 500
+      body e.message.to_json
     end
   end
 
   get '/api/user/:id/posts' do
     begin
       posts = DB[:posts].where(postedBy: @params['id']).all
-      [200, {}, posts.to_json]
+      status 200
+      body posts.to_json
     rescue => e
       puts e
-      [500, {}, [e.message]]
+      status 500
+      body e.message.to_json
     end
   end
 
@@ -28,10 +31,11 @@ class Reactinatra < Sinatra::Base
     begin
       id = DB[:posts].insert nil, @body['text'], @body['isReplyTo'], session[:userId] || @body['userId'] , Time.now
       puts "Created post #{id}"
-      [200, {}, [id.to_json]]
+      [200, {}, id.to_json]
     rescue => e
       puts e
-      [500, {}, [e.message]]
+      status 500
+      body e.message.to_json
     end
   end
 end

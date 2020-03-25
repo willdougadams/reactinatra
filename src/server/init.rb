@@ -1,4 +1,3 @@
-# encoding: utf-8
-
-require_relative 'index.rb'
+require_relative 'reactinatra.rb'
+require_relative 'browser.rb'
 require_relative 'api.rb'

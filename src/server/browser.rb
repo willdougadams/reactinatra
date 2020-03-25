@@ -1,8 +1,7 @@
+# encoding: utf-8
 require 'sinatra/base'
 
 class Reactinatra < Sinatra::Base
-  set :views, 'public'
-
   get '/' do
     @react_module = 'landing'
     erb :react
