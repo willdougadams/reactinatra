@@ -2,8 +2,8 @@ import * as React from 'react'
 import { darkTheme } from '../assets/theme'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { Posts } from './posts'
-import { PostComposer } from './postComposer'
+import { Posts } from './Posts'
+import { PostComposer } from './PostComposer'
 import { DashboardProps, Post } from './types'
 
 const postPost = async (post: Post) => {
