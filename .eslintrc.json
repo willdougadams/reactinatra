@@ -10,8 +10,7 @@
         "jasmine": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "standard"
+        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -30,5 +29,6 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "react/jsx-uses-vars": ["error"]
     }
 }

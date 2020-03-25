@@ -13,7 +13,7 @@ export interface Post {
 }
 
 export interface PostComposerProps {
-  callback: (post: Post) => void
+  callback: () => void
   userId: string
   isReplyTo: string | null
 }
