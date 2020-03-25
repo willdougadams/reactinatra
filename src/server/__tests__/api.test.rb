@@ -15,12 +15,21 @@ class ReactinatraIndexTest < Test::Unit::TestCase
 
   def test_landing_page_serves
     post '/api/signup', {
-        :name => 'Willie',
-        :username => 'willdougadams',
-        :email => 'name@domain.com',
-        :password => 'p455w0rD'
+      :name => 'Willie',
+      :username => 'willdougadams',
+      :email => 'name@domain.com',
+      :password => 'p455w0rD'
     }
     assert_match /anything/, last_response.body
+    assert last_response.ok?
+  end
+
+  def test_new_post_works
+    post '/api/post',  {
+      :text => 'this is the posts text',
+      :isReplyTo => null
+    }
+    assert_match /1/, last_response.body
     assert last_response.ok?
   end
 end
